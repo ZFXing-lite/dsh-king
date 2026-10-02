@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/YuJunZhiXue/dsh-king/stargazers"><img src="https://img.shields.io/github/stars/YuJunZhiXue/dsh-king?logo=github&label=Stars" alt="GitHub stars"></a>
+  <a href="https://github.com/ZFXing-lite/dsh-king/stargazers"><img src="https://img.shields.io/github/stars/ZFXing-lite/dsh-king?logo=github&label=Stars" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-65a30d?style=flat" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/dsh-0.1.5--rc.2-blue" alt="DSH">
 </p>
@@ -50,7 +50,7 @@
 ## 安装
 
 ```sh
-dsh plugin --profile web add https://github.com/YuJunZhiXue/dsh-king/archive/refs/heads/master.tar.gz
+dsh plugin --profile web add https://github.com/ZFXing-lite/dsh-king/archive/refs/heads/master.tar.gz
 ```
 
 当前目录已是本仓库时：

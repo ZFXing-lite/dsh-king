@@ -52,11 +52,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YuJunZhiXue/dsh-king.git"
+    "url": "git+https://github.com/ZFXing-lite/dsh-king.git"
   },
-  "homepage": "https://github.com/YuJunZhiXue/dsh-king#readme",
+  "homepage": "https://github.com/ZFXing-lite/dsh-king#readme",
   "bugs": {
-    "url": "https://github.com/YuJunZhiXue/dsh-king/issues"
+    "url": "https://github.com/ZFXing-lite/dsh-king/issues"
   },
   "dsh": {
     "bundle": {
