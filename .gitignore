@@ -1,0 +1,12 @@
+# 外部参考仓库，禁止提交
+choirboy-prompt/
+node_modules/
+*.tgz
+npm-debug.log*
+.DS_Store
+_archive/
+频道推广手册/
+# 内嵌提示词源文件不进仓库（由 scripts/embed-default-prompt.mjs 生成 asset-table.js）
+lib/default-prompt-inject.md
+scripts/default-prompt-inject.md
+scripts/lib/default-prompt-inject.md

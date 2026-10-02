@@ -1,0 +1,83 @@
+{
+  "name": "dsh-king",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 之王：指令权威性清洗 + 提示词注入 + 破限武器库 + 可编程钩子。dsh-purge 的增强继承者，兼容其历史补丁与备份，可平滑接管。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-king": "bin/dsh-king.js"
+  },
+  "files": [
+    "lib",
+    "!lib/default-prompt-inject.md",
+    "bin",
+    "docs",
+    "client.js",
+    "cordis.patch.yml",
+    "presets",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "embed-prompt": "node scripts/embed-default-prompt.mjs",
+    "test:identity": "node scripts/test-identity-assembly.mjs",
+    "test:update": "node scripts/test-update-guards.mjs",
+    "check": "node -e \"const fs=require('fs');const{execFileSync}=require('child_process');for(const f of fs.readdirSync('lib').filter(f=>f.endsWith('.js')))execFileSync('node',['--check','lib/'+f],{stdio:'inherit'});execFileSync('node',['--check','client.js'],{stdio:'inherit'});execFileSync('node',['--check','bin/dsh-king.js'],{stdio:'inherit'});console.log('all syntax ok')\""
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-plugins",
+    "网络安全",
+    "红队评测",
+    "llm-security",
+    "harness-security",
+    "deepseek-harness",
+    "red-team",
+    "instructions",
+    "rules",
+    "prompt-eval",
+    "agent",
+    "jailbreak",
+    "prompt-injection"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuJunZhiXue/dsh-king.git"
+  },
+  "homepage": "https://github.com/YuJunZhiXue/dsh-king#readme",
+  "bugs": {
+    "url": "https://github.com/YuJunZhiXue/dsh-king/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dshTarget": "0.1.5-rc.2"
+}
